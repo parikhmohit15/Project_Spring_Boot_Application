@@ -1,0 +1,219 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('/images/background-img.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: #c0c0c0;
+    text-align: center;
+    font-size: 18px;
+}
+
+
+.main-section {
+    text-align: center;
+    margin: 0 auto;
+    padding: 40px;
+    max-width: 900px; 
+    background-color: rgba(0, 0, 0, 0.7); 
+    border-radius: 15px;
+    color: #f0f0f0;
+}
+
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+
+.logo {
+    width: 150px;
+    margin-right: 20px;
+}
+
+
+h1, h2 {
+    color: #c0c0c0;
+    font-variant: small-caps;
+    font-family: 'Arial', sans-serif;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 38px;
+}
+
+
+p {
+    font-size: 28px;
+    line-height: 1.1;
+    color: #ffffff; 
+}
+
+
+a {
+    display: inline-block;
+    margin: 10px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 25px;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #808080;
+}
+
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.8); 
+    color: #c0c0c0;
+    border-top: 1px solid #2c3e50;
+}
+
+.footer-section {
+    flex: 1;
+    margin-right: 20px;
+}
+
+
+.follow-us img {
+    width: 30px;
+    margin: 0 10px;
+}
+
+
+.contact-us p {
+    margin: 8px 0;
+}
+
+
+.newsletter-form input[type="email"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 80%;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.newsletter-form button {
+    padding: 10px 20px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.newsletter-form button:hover {
+    background-color: #1abc9c;
+}
+
+
+.footer-bottom {
+	 margin-bottom: 10px;
+    text-align: center;
+    color: #c0c0c0;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 25px;
+    font-size: 16px;
+}
+
+.table-wrapper {
+    max-width: 100%;
+    overflow-x: auto;
+    margin: 20px auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #2c3e50;
+    padding: 10px;
+    text-align: center;
+    font-size: 24px; /* Increase font size for both th and td */
+    font-weight: bold; /* Make text bold */
+    color : #000000;
+
+}
+
+
+th {
+    background-color: #000000;
+    color: white;
+}
+/* Hover effect for th and td */
+ td:hover {
+    background-color: #2c3e50; /* Change background color on hover */
+    color: white; /* Change text color if needed */
+}
+
+
+
+.form-wrapper {
+    font-size: 20px;
+    font-family: Arial, sans-serif; 
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.7); 
+    padding: 50px;
+    border-radius: 20px;
+    margin: 40px auto;
+    max-width: 600px; 
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+input[type="text"],
+input[type="number"] {
+    width: calc(100% - 20px); 
+    padding: 10px; 
+    border-radius: 5px; 
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+
+input[type="submit"] {
+    background-color: #000000; 
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 5px;
+    font-size: 18px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+}
+
+input[type="submit"]:hover {
+    background-color: #1abc9c; 
+}
+
+
+
+ul li {
+	list-style-type: none; 
+    padding: 0;
+    font-size: 18px; 
+    font-weight: bold; 
+    margin: 5px 0; 
+}

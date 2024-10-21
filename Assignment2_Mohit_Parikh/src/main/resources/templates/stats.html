@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Store Statistics</title>
+    <link rel="stylesheet" th:href="@{mycss.css}"> <!-- Link to your CSS -->
+ 
+</head>
+<body>
+    <h1>Store Statistics</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Statistic</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Total Items</td>
+                <td><span th:text="${totalItems}"></span></td>
+            </tr>
+            <tr>
+                <td>Average Price</td>
+                <td>$<span th:text="${averagePrice}"></span></td>
+            </tr>
+            <tr>
+                <td>Total Stock Value</td>
+                <td>$<span th:text="${totalStockValue}"></span></td>
+            </tr>
+            <tr>
+                <td>Top Selling Gadget</td>
+                <td><span th:text="${topSellingGadget}"></span></td>
+            </tr>
+            <tr>
+                <td>Most Expensive Item</td>
+                <td><span th:text="${mostExpensiveItem}"></span></td>
+            </tr>
+        </tbody>
+    </table>
+    <a href="/">BACK TO HOME PAGE</a>
+    <a href="/view">BACK TO VIEW PAGE </a>
+</body>
+</html>

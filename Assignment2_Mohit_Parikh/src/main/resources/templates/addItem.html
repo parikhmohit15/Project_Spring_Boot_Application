@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Add Item </title>
+<link rel="stylesheet" th:href="@{mycss.css}">
+</head>
+	<body>
+		<h2>Place Your Item Here </h2>
+		 <div class="form-wrapper">
+		<form th:action="@{/add}" th:object="${item}" method="post">
+    		Name:<input type="text" th:field="*{name}" /> <br></br>
+   			Price:<input type="number" th:field="*{price}" /><br></br>
+    		Category:<input type="text" th:field="*{category}" /><br></br>
+    		PowerLevel:<input type="number" th:field="*{powerlevel}" /><br></br>
+    		Material:<input type="text" th:field="*{material}" /><br></br>
+    		Weight:<input type="number" th:field="*{weight}" /><br></br>
+    		StockStatus:<input type="text" th:field="*{stockStatus}" /><br></br>
+    		<input type="submit" value="Submit">
+		</form>
+		 </div>
+		<a href= "/"> BACK TO HOME PAGE</a>
+		<a href= "/view"> GO TO VIEW PAGE</a>
+		
+		
+	
+		 
+	</body>
+</html>
