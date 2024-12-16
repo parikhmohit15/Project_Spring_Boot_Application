@@ -1,0 +1,216 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and overall layout */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    text-align: center;
+    padding: 40px;
+    background-image: url('construction-bg.jpg'); /* Replace with your own background image */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Header */
+header {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #000000;
+    padding: 40px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 21px;
+    font-weight: lighter;
+    margin-top: 10px;
+    font-family: 'Georgia', serif;
+    color: #000000; /* Yellow to match the construction theme */
+}
+
+/* Authenticated User Info */
+.container {
+    background-color: rgba(0, 64, 64, 0.8); /* Transparent dark green */
+    padding: 40px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    text-align: left;
+}
+
+.container h2 {
+    font-size: 26px;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.container .info {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.container span {
+    font-weight: bold;
+    color: #c0c0c0; /* Highlighted name and roles in yellow */
+    font-size: 22px;
+}
+
+/* Button styles */
+form input[type="submit"] {
+    background-color: #333;
+    color: #ffffff;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #008040;
+    color: #333;
+    transform: scale(1.05);
+}
+
+/* Links for navigation */
+.links {
+    font-size: 18px;
+    margin-top: 30px;
+}
+
+.links a {
+    display: inline-block;
+    margin: 15px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 12px 25px;
+    background-color: #000000;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.links a:hover {
+    background-color: #008040;
+    color: #333;
+    box-shadow: 0 4px 12px rgba(0, 64, 64, 0.5);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    header {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .container{
+        padding: 25px;
+        max-width: 100%;
+    }
+
+    .links a {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
+
+/* Vendor Info Section */
+.vendor-info {
+    background-color: #f9f9f9; /* Light background color for the section */
+    padding: 20px; /* Padding around the section */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow around the section */
+    margin-top: 40px; /* Space above the section */
+    color: #333; /* Dark text color for readability */
+    font-family: 'Arial', sans-serif; /* Font style */
+}
+
+/* Heading Style */
+.vendor-info h3 {
+    font-size: 28px; /* Larger font size for the heading */
+    font-weight: bold; /* Bold text */
+    color: #2d3e50; /* Darker shade for the heading */
+    text-transform: uppercase; /* Uppercase letters for emphasis */
+    margin-bottom: 15px; /* Space below the heading */
+}
+
+/* Paragraph Style */
+.vendor-info p {
+    font-size: 20px; /* Slightly larger text for paragraph */
+    line-height: 1.6; /* Increased line height for better readability */
+    margin-bottom: 20px; /* Space below the paragraph */
+    color: #555; /* Slightly lighter text color */
+}
+
+/* List Style */
+.vendor-info ul {
+    list-style-type: none; /* Remove default bullets */
+    padding-left: 0; /* Remove default padding */
+}
+
+.vendor-info li {
+    font-size: 18px; /* Font size for list items */
+    margin-bottom: 12px; /* Space between list items */
+    padding-left: 25px; /* Add some padding to the left */
+    position: relative; /* Position for custom bullet */
+}
+
+/* Custom Bullet Style */
+.vendor-info li::before {
+    content: '\2022'; /* Unicode character for a bullet */
+    font-size: 30px; /* Size of the bullet */
+    color: #008040; /* Green color for the bullet */
+    position: absolute; /* Position the bullet */
+    left: 0; /* Align it to the left of the list item */
+    top: 0; /* Align it to the top */
+}
+
+/* Strong Text Style */
+.vendor-info strong {
+    color: #2c3e50; /* Dark color for strong text */
+    font-weight: bold; /* Bold font for important terms */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .vendor-info {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    .vendor-info h3 {
+        font-size: 24px; /* Smaller heading font size for mobile */
+    }
+
+    .vendor-info p,
+    .vendor-info li {
+        font-size: 16px; /* Adjust font size for better readability on mobile */
+    }
+}
+

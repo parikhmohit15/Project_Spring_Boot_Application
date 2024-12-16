@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+    <title>Edit Ticket</title>
+<link rel="stylesheet" th:href="@{/css/edit.css}">
+</head>
+<body>
+    <h1>Edit Ticket</h1>
+    <div class="form">
+        <form th:action="@{/edit}" th:object="${ticket}" method="post">
+            <input type="hidden" th:field="*{id}">
+           
+            <br>
+            <div>
+                <label for="name">Ticket Holder's Name:</label>
+                <input type="text" th:field="*{ticketHolder}" required>
+            </div>
+            <br>
+            <div>
+                <label for="price">Ticket Price (in $):</label>
+                <input type="number" th:field="*{ticketPrice}" step="0.01" required>
+            </div>
+            <br>
+            <div>
+                <label for="seatNumber">Seat Number:</label>
+                <input type="text" th:field="*{seatNumber}" required>
+            </div>
+            <br>
+            <div>
+                <label for="eventLocation">Event Location:</label>
+                <input type="text" th:field="*{eventLocation}" required>
+            </div>
+            <br>
+            <div>
+                <label for="eventDate">Event Date:</label>
+                <input type="date" th:field="*{eventDate}" required>
+            </div>
+            <br>
+            <div>
+                <label for="eventTime">Event Time:</label>
+                <input type="time" th:field="*{eventTime}" required>
+            </div>
+            <br>
+            <input type="submit" value="Submit">
+            
+             <a href="/">RETURN TO HOME PAGE</a> 
+             <a href="/view">RETURN TO VIEW PAGE</a>
+        </form>
+    </div>
+    <br>
+</body>
+</html>
+
+
+
+

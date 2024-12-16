@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>View Tickets</title>
+   <link rel="stylesheet" th:href="@{css/viewTicket.css}">
+</head>
+<body>
+    <header>
+        <img src="images/download.jpeg" alt="Logo" class="logo">
+        <h1>Your Tickets Are Here</h1>
+       
+    </header>
+
+    <section>
+        <table>
+            <thead>
+                <tr>
+                    <th>Ticket Holder</th>
+                    <th>Ticket Price</th>
+                    <th>Seat Number</th>
+                    <th>Event Location</th> 
+                    <th>Event Date</th>
+                    <th>Event Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="ticket : ${ticketList}">
+                
+                    <td th:text="${ticket.ticketHolder}"></td>
+                    <td th:text="${ticket.ticketPrice}"></td>
+                    <td th:text="${ticket.seatNumber}"></td>
+                    <td th:text="${ticket.eventLocation}"></td> 
+                    <td th:text="${ticket.eventDate}"></td> 
+                    <td th:text="${ticket.eventTime}"></td>
+                    <td><a th:href="@{/edit/{id}(id=${ticket.id})}">Edit</a></td>
+    		        <td><a th:href="@{/delete/{id}(id=${ticket.id})}">Delete</a></td>
+                </tr>
+            </tbody>
+        </table>
+        
+         <div th:if="${showSummary}" class="summary">  
+        <h3>SUMMARY</h3>  
+        <p>SubTotal: 
+        <span th:text="${subtotal}"></span></p>  
+        <p>Tax(25%): 
+        <span th:text="${tax}"></span></p>  
+        <p>Total: 
+        <span th:text="${total}"></span></p>  
+     
+        
+        
+        
+        </div>
+     
+              <a href="/">RETURN TO HOME PAGE</a> <br>
+              <a th:href="@{/add}">  RETURN TO ADD PAGE</a> <br>
+              <a th:href="@{/vender}"> RETURN TO VENDER</a> 
+             
+       </section>
+
+   
+
+    <footer>
+       <h3>About Us</h3>
+        <p>Welcome to our event platform! We are dedicated to providing the best experiences for our users.</p>
+        <p>Thank you for choosing us!</p>
+        <p>© 2024 The Building Show | All Rights Reserved | Terms And Conditions Applied</p>
+        <p>Email us: <a href="mailto:eventshow@thebuildingshow.com">eventshow@thebuildingshow.com</a></p>
+    </footer>
+</body>
+</html>

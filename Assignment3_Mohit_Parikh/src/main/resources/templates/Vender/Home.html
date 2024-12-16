@@ -1,0 +1,43 @@
+<!DOCTYPE html>  
+<html xmlns:th="http://www.thymeleaf.org"  
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Vendor's Home Page</title>  
+    <link rel="stylesheet" th:href="@{css/role.css}">
+</head>  
+<body>  
+    <header>
+        <h1>Welcome to Vender's Page</h1>
+        <p>Manage your products, view details, and more!</p>
+    </header>
+
+    <div sec:authorize="isAuthenticated()" class="container">  
+        <h2>Welcome back, <span sec:authentication="name"></span>!</h2>
+        <h2>Your current role: <span sec:authentication="principal.authorities"></span></h2>
+
+        <form th:action="@{logout}" method="post">  
+            <input type="submit" value="Logout">  
+        </form>  
+    </div>  
+
+    <section class="vendor-info">
+        <h3>About Your Vender Account</h3>
+        <p>This section allows you to manage all aspects of your vender profile, including Ticket listings, view sales statistics, and edit your profile information.</p>
+        <ul>
+            <li><strong>Manage Tickets:</strong> Add, edit, or delete Tickets.</li>
+            <li><strong>View Tickets :</strong> See the list of Tickets placed by customers.</li>
+        </ul>
+    </section>
+
+    <div class="links">
+        <a th:href="@{/}">RETURN TO HOME PAGE</a><br>
+        <a th:href="@{/add}"> GO TO ADD PAGE</a><br>
+        <a th:href="@{/view}"> GO TO VIEW PAGE </a><br>
+    </div>  
+
+    <footer>
+        <p>Thank you for being a part of our vender community. For any inquiries, contact us at thebuildingshow@vender.com.</p>
+    </footer>
+</body>  
+</html>

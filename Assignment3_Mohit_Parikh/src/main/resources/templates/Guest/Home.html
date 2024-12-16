@@ -1,0 +1,32 @@
+<!DOCTYPE html>  
+<html xmlns:th="http://www.thymeleaf.org"  
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Home Page</title>  
+    <link rel="stylesheet" th:href="@{css/role.css}">
+</head>  
+<body>  
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to Guest's Page</h1>
+        <p>Building a Better Future, One Step at a Time</p>
+    </header>
+
+    <!-- Authenticated User Info -->
+    <div sec:authorize="isAuthenticated()" class="container">  
+        <h2>User's name: <span sec:authentication="name"></span>!</h2>
+        <h2>Here are your current role: <span sec:authentication="principal.authorities"></span></h2>
+        
+        <!-- Logout Form -->
+        <form th:action="@{logout}" method="post">  
+            <input type="submit" value="Logout">  
+        </form>  
+    </div>  
+     <!-- Navigation Links -->
+    <div class="links">  
+        <a th:href="@{/}">RETURN TO HOME PAGE</a><br>
+        <a th:href="@{/view}">GO TO VIEW PAGE</a> 
+    </div>  
+</body>  
+</html>

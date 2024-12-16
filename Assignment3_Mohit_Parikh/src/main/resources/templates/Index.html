@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Event Management System</title>
+    <link rel="stylesheet" th:href="@{css/style.css}">
+</head>
+<body>
+    <header>
+        <img src="images/download.jpeg" alt="Logo" class="logo">
+        <h1>Welcome To Our Construction Event</h1>
+        <h2>THE BUILDING SHOW</h2>
+        <nav class="menu">
+            <a href="#companies">Companies</a>
+            <a href="#projects">Projects</a>
+            <a href="#about">About</a>
+            <a href="#news">News</a>
+            <a href="#careers">Careers</a>
+        </nav>
+    </header>
+
+    <!-- Introduction Section -->
+    <section>
+        <h3>Introduction</h3>
+        <p>Join us for an exciting construction event showcasing the latest industry innovations!</p>
+        <p>Connect with professionals and enthusiasts, attend workshops, and network with industry leaders while promoting sustainable practices and sharing knowledge that drives the sector forward.</p>
+        <p>Don't miss this transformative experience!</p>
+    </section>
+<!-- Workshops and Speakers Section -->
+    <div class="main-content">
+      <section>
+            <h3>Workshops & Seminars</h3>
+            <p>Choose from a variety of workshops tailored to different skill levels and interests.</p>
+            <ul>
+                <li>Introduction to Green Construction</li>
+                <li>3D Printing in Architecture</li>
+                <li>Project Management Essentials</li>
+            </ul>
+      
+            <h3>Featured Speakers</h3>
+            <p>Get inspired by industry leaders and innovators.</p>
+            <ul>
+                <li><strong>John Doe</strong> - Sustainable Building Expert</li>
+                <li><strong>Jane Smith</strong> - Urban Planner and Innovator</li>
+                <li><strong>Emily Carter</strong> - Construction Tech Entrepreneur</li>
+            </ul>
+        
+      
+            <h3>Event Highlights</h3>
+            <p>Here are some of the exciting features of this year's event:</p>
+            <ul>
+                <li>Live Demonstrations of the Latest Construction Technologies</li>
+                <li>Networking Lounges for Professionals</li>
+                <li>Exclusive Access to Industry Reports and Market Insights</li>
+            </ul>
+      
+   
+
+    <!-- Upcoming Updates Section -->
+
+        <h3>More Updates Coming Soon!</h3>
+        <p>Stay tuned for more exciting announcements, including:</p>
+        <ul>
+            <li>New Workshops and Seminars</li>
+            <li>Exclusive Speaker Announcements</li>
+            <li>Special Early Bird Ticket Offers</li>
+        </ul>
+        <p>We'll be updating this page regularly, so check back soon for the latest news!</p>
+    </section>
+    
+     </div>
+    <!-- Ticket Booking Section -->
+    
+    <section>
+        <h3>Book Your Tickets Here</h3>
+        <a th:href="@{/register}">Go to Registration Page</a><br>
+        <a th:href="@{/vender}">Go to Vendor</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <h3>About Us</h3>
+        <p>Welcome to *The Building Show*! Our mission is to bring together professionals, companies, and enthusiasts from the construction industry under one roof to explore innovations, share knowledge, and drive progress.</p>
+        
+        <h4>Why Choose Us?</h4>
+        <ul>
+            <li>Unmatched networking opportunities</li>
+            <li>Exclusive industry insights</li>
+            <li>A commitment to sustainability and innovation</li>
+        </ul>
+        
+        <h4>Follow Us</h4>
+        <p>
+            Stay connected on our social media platforms:<br>
+            <a href="https://www.facebook.com/TheBuildingShow" target="_blank">Facebook</a> | 
+            <a href="https://twitter.com/TheBuildingShow" target="_blank">Twitter</a> | 
+            <a href="https://www.linkedin.com/company/the-building-show" target="_blank">LinkedIn</a>
+        </p>
+        
+        <h4>Contact Information</h4>
+        <p>Email us: <a href="mailto:eventshow@thebuildingshow.com">eventshow@thebuildingshow.com</a></p>
+        <p>Call Us: 
+            <a href="tel:+1234567890" class="call-us">
+                <img src="images/call.png" alt="Call Us" class="call-icon"> +1 (234) 567-890
+            </a>
+        </p>
+        <p>Visit us at: <br>
+            123 Event Plaza, Toronto, ON, Canada</p>
+        <p>© 2024 The Building Show | All Rights Reserved | Terms and Conditions Apply</p>
+    </footer>
+</body>
+</html>

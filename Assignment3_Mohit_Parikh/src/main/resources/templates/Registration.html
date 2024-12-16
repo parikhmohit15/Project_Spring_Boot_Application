@@ -1,0 +1,35 @@
+<!DOCTYPE html>  
+<html xmlns:th="http://www.thymeleaf.org"  
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Register Page</title>  
+    <link rel="stylesheet" th:href="@{css/Authenction.css}">
+</head>  
+<body>  
+
+<div class="container">  
+    <div th:if="${param.failed}" class="error">  
+        Incorrect Username or Password.  
+    </div>  
+    <form method="post" th:action="@{/register}">  
+        <h2>Please Register</h2>  
+        <p>  
+            <label for="username">Username:</label>  
+            <input type="text" id="username" name="username" placeholder="Username" required autofocus>  
+        </p>  
+        <p>  
+            <label for="password">Password:</label>  
+            <input type="password" id="password" name="password" placeholder="Password" required>  
+        </p>  
+        <input type="submit" value="Register">  
+    </form>  
+
+    <div class="links">  
+        <a th:href="@{/}">RETURN TO HOME PAGE </a> <br>
+        <a th:href="@{/guest}">GO TO GUEST PAGE</a>  
+    </div>  
+</div>  
+
+</body>  
+</html>
